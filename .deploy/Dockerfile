@@ -100,4 +100,5 @@ USER root
 
 RUN apk add nodejs npm
 RUN npm install
+RUN npm run build
 USER $NON_ROOT_USER
