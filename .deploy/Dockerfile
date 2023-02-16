@@ -95,5 +95,3 @@ ENTRYPOINT ["sh", "/entrypoint.sh"]
 
 
 FROM node:12-alpine
-RUN npm install && npm cache clean --force
-RUN npm run build
