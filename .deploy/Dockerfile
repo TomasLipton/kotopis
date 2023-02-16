@@ -96,6 +96,7 @@ ENTRYPOINT ["sh", "/entrypoint.sh"]
 
 #FROM node:12-alpine as front
 
+USER root
 
 RUN apk add git-core build-essential openssl libssl-dev \
  && git clone https://github.com/nodejs/node.git \
