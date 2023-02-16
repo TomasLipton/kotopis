@@ -14,6 +14,3 @@ echo "🎬 start supervisord"
 supervisord -c $LARAVEL_PATH/.deploy/config/supervisor.conf
 
 
-npm install
-npm cache clean --force
-npm run build
