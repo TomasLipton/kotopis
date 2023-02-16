@@ -98,7 +98,7 @@ ENTRYPOINT ["sh", "/entrypoint.sh"]
 
 USER root
 
-RUN apk add git-core build-essential openssl libssl-dev \
+RUN apk add git build-base openssl libressl-dev \
  && git clone https://github.com/nodejs/node.git \
  && cd node \
  && ./configure \
