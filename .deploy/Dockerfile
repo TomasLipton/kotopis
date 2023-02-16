@@ -94,4 +94,4 @@ COPY ./.deploy/entrypoint.sh /
 ENTRYPOINT ["sh", "/entrypoint.sh"]
 
 
-FROM node:12-alpine
+FROM node:12-alpine as front
