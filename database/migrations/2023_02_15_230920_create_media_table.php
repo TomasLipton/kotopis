@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('footprints', function (Blueprint $table) {
+        Schema::create('media', function (Blueprint $table) {
             $table->id();
-
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-
-            $table->text('summary')->nullable();
-
-            $table->string('location')->nullable();
+            $table->string('path');
+            $table->text('description')->nullable();
+            $table->enum('type', ['video', 'picture'])
+                ->default('picture');
+            $table->foreignId('footprint_id')->constrained()->cascadeOnDelete();
 
             $table->timestamps();
         });
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('footprints');
+        Schema::dropIfExists('media');
     }
 };

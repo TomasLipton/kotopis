@@ -2,22 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Footprint;
+use App\Models\Media;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\View\View;
 
-class FootprintController extends Controller
+class MediaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): View
+    public function index(): Response
     {
-        return view('welcome', [
-            'footprints' => Footprint::all()
-        ]);
+        //
     }
 
     /**
@@ -39,7 +36,7 @@ class FootprintController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Footprint $footprint): Response
+    public function show(Media $media): Response
     {
         //
     }
@@ -47,7 +44,7 @@ class FootprintController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Footprint $footprint): Response
+    public function edit(Media $media): Response
     {
         //
     }
@@ -55,7 +52,7 @@ class FootprintController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Footprint $footprint): RedirectResponse
+    public function update(Request $request, Media $media): RedirectResponse
     {
         //
     }
@@ -63,7 +60,7 @@ class FootprintController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Footprint $footprint): RedirectResponse
+    public function destroy(Media $media): RedirectResponse
     {
         //
     }
