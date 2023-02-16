@@ -98,9 +98,4 @@ ENTRYPOINT ["sh", "/entrypoint.sh"]
 
 USER root
 
-RUN apk add git python-dev build-base openssl libressl-dev \
- && git clone https://github.com/nodejs/node.git \
- && cd node \
- && ./configure \
- && make \
- && sudo make install
+RUN apk add nodejs npm
