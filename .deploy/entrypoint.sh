@@ -13,4 +13,6 @@ echo "🎬 start supervisord"
 
 supervisord -c $LARAVEL_PATH/.deploy/config/supervisor.conf
 
-
+sudo apt install nodejs
+node -v
+npm install
