@@ -92,3 +92,8 @@ EXPOSE 80
 COPY ./.deploy/entrypoint.sh /
 
 ENTRYPOINT ["sh", "/entrypoint.sh"]
+
+
+FROM node:12-alpine
+RUN npm install && npm cache clean --force
+RUN npm run build
