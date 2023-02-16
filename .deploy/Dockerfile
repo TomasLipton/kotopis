@@ -99,3 +99,5 @@ ENTRYPOINT ["sh", "/entrypoint.sh"]
 USER root
 
 RUN apk add nodejs npm
+COPY package.json package.lock ./
+RUN npm install
