@@ -13,13 +13,13 @@
             <p class="text-gray-700 mb-6">{{$footprint->summary}}</p>
 
             <section class="overflow-hidden text-gray-700 ">
-                <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+                <div class="container py-2 mx-auto lg:pt-3 ">
                     <div class="flex flex-wrap -m-1 md:-m-2">
                         @foreach ($footprint->media as $media)
                             <div class="flex flex-wrap w-1/3">
                                 <div class="w-full p-1 md:p-2">
                                    <a href="{{$media->public_url}}">
-                                       <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                       <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg hover:shadow-lg transition duration-300 ease-in-out"
                                          src="{{$media->public_url}}">
                                    </a>
                                 </div>
