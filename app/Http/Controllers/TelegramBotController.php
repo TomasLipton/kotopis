@@ -38,7 +38,8 @@ class TelegramBotController extends Controller
         });
 
         $botman->receivesImages(function ($bot, $images) {
-            $bot->reply('Загрузка...');
+
+            $bot->reply('Приветик, сейчас я загружу картинку, секунду.');
             $bot->typesAndWaits(2);
             /** @var Image $image */
             $fp = Footprint::create([
@@ -62,7 +63,7 @@ class TelegramBotController extends Controller
                                   'footprint_id' => $fp->id,
                               ]);
 
-                $bot->reply('OK - check kotopis.avgust.dev');
+                $bot->reply('Готово, смотри - kotopis.avgust.dev');
             }
         });
 
