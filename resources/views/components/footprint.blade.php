@@ -18,7 +18,7 @@
                         @foreach ($footprint->media as $media)
                             <div class="flex flex-wrap w-1/3">
                                 <div class="w-full p-1 md:p-2">
-                                   <a href="{{$media->public_url}}">
+                                   <a class="modal-open " href="{{$media->public_url}}">
                                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg hover:shadow-lg transition duration-300 ease-in-out"
                                          src="{{$media->public_url}}">
                                    </a>
