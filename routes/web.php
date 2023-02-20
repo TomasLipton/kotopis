@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\FootprintController::class, 'index']);
+Route::any('/bot', [\App\Http\Controllers\TelegramBotController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

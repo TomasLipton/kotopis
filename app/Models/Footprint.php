@@ -9,6 +9,8 @@ class Footprint extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['user_id'];
+
     public function media()
     {
         return $this->hasMany(Media::class);
