@@ -15,7 +15,7 @@ class FootprintController extends Controller
      */
     public function index(): View
     {
-        return view('welcome', [
+        return view('welcome2', [
             'footprints' => Footprint::orderBy('created_at', 'desc')->get()
         ]);
     }
