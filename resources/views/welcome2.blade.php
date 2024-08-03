@@ -5,8 +5,8 @@
             @foreach ($footprints as $footprint)
 {{--                <x-footprint :footprint="$footprint"></x-footprint>--}}
                 @foreach ($footprint->media as $media)
-                    <figure class="modal-open " onclick="toggleModal2('modal-id', '{{$media->public_url}}')">
-                        <img loading="lazy" src="{{$media->public_url}}" alt="Pink and blue clouds at sunset. " title="Photo by Jeremy Doddridge for Unsplash">
+                    <figure class="modal-open " onclick="toggleModal2('modal-id', '{{$media->public_url}}')" style="cursor: pointer">
+                        <img loading="lazy" src="{{$media->public_url}}" alt="Photo of the cat" title="Photo of the cat" >
                         <figcaption>
                             {{$footprint->created_at->format('d M Y')}}
 {{--                            <br>--}}
@@ -22,6 +22,9 @@
                     <div>
                         <h2>Привет </h2>
                         <p>Меня зовут кошечка Майли</p>
+                        <hr>
+                        <h2>Hello </h2>
+                        <p>My name is Miley</p>
 {{--                        <p><br><small>Related work : <br><a target="_blank" href="https://codepen.io/wakana-k/pen/oNJxbPw">Hover animation version</a></small></p>--}}
                     </div>
                 </div>

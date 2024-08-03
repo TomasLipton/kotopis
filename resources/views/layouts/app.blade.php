@@ -6,15 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Котопись - фотографии нашей кошечки Майли  | Kotopis</title>
+        <title>Котопись - фотографии нашей кошечки Майли | Kotopis</title>
 
-        <!-- Fonts -->
+{{--        <!-- Fonts -->--}}
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        <!-- Scripts -->
+{{--        <!-- Scripts -->--}}
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <!-- Google tag (gtag.js) -->
+{{--        <!-- Google tag (gtag.js) -->--}}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6L8NE64DD"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -29,7 +29,7 @@
 {{--            bg-gray-100--}}
 {{--            @include('layouts.navigation-guest')--}}
 
-            <!-- Page Heading -->
+{{--            <!-- Page Heading -->--}}
             @if (isset($header))
                 <header class="bg-white shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -38,7 +38,7 @@
                 </header>
             @endif
 
-            <!-- Page Content -->
+{{--            <!-- Page Content -->--}}
             <main>
                 {{ $slot }}
             </main>
