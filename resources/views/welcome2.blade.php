@@ -6,7 +6,7 @@
 {{--                <x-footprint :footprint="$footprint"></x-footprint>--}}
                 @foreach ($footprint->media as $media)
                     <figure class="modal-open " onclick="toggleModal2('modal-id', '{{$media->public_url}}')">
-                        <img src="{{$media->public_url}}" alt="Pink and blue clouds at sunset. " title="Photo by Jeremy Doddridge for Unsplash">
+                        <img loading="lazy" src="{{$media->public_url}}" alt="Pink and blue clouds at sunset. " title="Photo by Jeremy Doddridge for Unsplash">
                         <figcaption>
                             {{$footprint->created_at->format('d M Y')}}
 {{--                            <br>--}}
