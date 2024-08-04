@@ -11,6 +11,14 @@
                             {{$footprint->created_at->format('d M Y')}}
 {{--                            <br>--}}
 {{--                            8 PM, Summer--}}
+                            @if(\Illuminate\Support\Facades\Auth::check())
+                                <form method="post" action="{!! route('footprint.destroy', ['footprint' => $footprint]) !!}">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button type="submit">❌</button>
+                                </form>
+                            @endif
+
                         </figcaption>
                     </figure>
                 @endforeach
@@ -101,7 +109,7 @@
 </script>
 
 
-
+{{--<script defer src="https://commento.avgust.dev/js/commento.js"></script>--}}
 {{--
 
 https://codepen.io/wakana-k/pen/WNLrWMm

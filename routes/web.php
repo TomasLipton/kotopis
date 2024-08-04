@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\FootprintController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\FootprintController::class, 'index'])->name('footprint.index');
+Route::delete('/footprint/{footprint}', [\App\Http\Controllers\FootprintController::class, 'destroy'])->name('footprint.destroy');
 Route::any('/bot', [\App\Http\Controllers\TelegramBotController::class, 'index']);
+
+
 //
 //Route::get('/dashboard', function () {
 //    return view('dashboard');
@@ -27,4 +30,4 @@ Route::any('/bot', [\App\Http\Controllers\TelegramBotController::class, 'index']
 //    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 //});
 //
-//require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';

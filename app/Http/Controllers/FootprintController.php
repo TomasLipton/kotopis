@@ -65,6 +65,8 @@ class FootprintController extends Controller
      */
     public function destroy(Footprint $footprint): RedirectResponse
     {
-        //
+        $footprint->delete();
+
+        return redirect()->route('footprint.index');
     }
 }
